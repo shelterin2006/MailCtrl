@@ -49,6 +49,11 @@ int main() {
         return -1;
     }else cout<<"accept() is working"<<endl;
 
-    WSACleanup();
-    return 0;
+    char buffer[200];
+    int byteCount;
+    while((byteCount = recv(acceptSocket, buffer, 200, 0)) > 0) {
+        string s = buffer;
+        
+    }
+    WSACleanup(); return 0;
 }
